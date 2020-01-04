@@ -15,7 +15,7 @@ class CitiesList extends Component {
                         {this.props.cities.map((item, index) => (
                             <li key={index} className={'cities-item'}>
                                 <p className={'cities-item__name'}>{item}</p>
-                                <span className={'cities-item__remove'} onClick={() => this.removeItemList(index)}>x</span>
+                                <span className={'cities-item__remove'} onClick={() => this.removeItemList(index)}>×</span>
                             </li>
                         ))}
                     </ul>

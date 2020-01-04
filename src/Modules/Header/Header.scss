@@ -1,0 +1,24 @@
+/*
+ * Header css File
+*/
+
+.header {
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #00aeef;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 100%;
+    max-width: 250px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  p {
+    text-align: right;
+  }
+}

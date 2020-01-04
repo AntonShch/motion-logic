@@ -8,7 +8,8 @@ class CitiesSearch extends Component {
         super(props);
         this.state = {
             value: '',
-            error: 'Ошибка',
+            error: false,
+            errorText: 'Ошибка.',
             citiesAPI: citiesAPI,
             autoComplete: '',
         };
@@ -17,7 +18,10 @@ class CitiesSearch extends Component {
     handleChange = event => {
         let valueInput = event.target.value;
         this.setState({value: valueInput});
-        this.autoCompleter(valueInput)
+        this.autoCompleter(valueInput);
+        if (!valueInput) {
+            this.setState({error: false});
+        }
     }
 
 
@@ -35,8 +39,14 @@ class CitiesSearch extends Component {
 
         if (this.props.cities.indexOf(result) === -1 && result) {
             this.props.addCity(result);
-            this.setState({value: ''});
+            this.setState({error: false, value: ''});
             this.autoCompleter(0)
+        } else {
+            if (this.props.cities.indexOf(result) !== -1) {
+                this.setState({error: true,errorText: 'Ошибка. Такой город уже есть в списке'});
+            } else {
+                this.setState({error: true,errorText: 'Ошибка. Некорректное значение'});
+            }
         }
 
         event.preventDefault();
@@ -66,9 +76,16 @@ class CitiesSearch extends Component {
     }
 
     render = () => {
+        let errorText;
+        if (this.state.error) {
+            errorText = <p className="cities-search__error">{this.state.errorText}</p>;
+        } else {
+            errorText = '';
+        }
         return (
-            <form action={'/test.js'} className={'cities-search'}>
+            <form action={'/test.js'} className={this.state.error ? 'cities-search cities-search--error' : 'cities-search'}>
                 <div className="cities-search__wrapper">
+                    {errorText}
                     <input value={this.state.value}
                            type={'text'}
                            className={'custom-input cities-search__input'}

@@ -60,6 +60,9 @@ body {
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   text-size-adjust: 100%;
+  background-repeat: no-repeat;
+  background-size: 00%;
+  background-position: 50% 50%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
@@ -76,8 +79,8 @@ body {
   align-items: center;
   font-size: 16px;
   font-weight: 600;
-    background: #4b6cb7;
-  border: 2px solid #4b6cb7;
+    background: #00aeef;
+  border: 2px solid #00aeef;
   transition: 0.3s;
   line-height: 1.45;
   font-style: normal;
@@ -86,8 +89,8 @@ body {
   color: white;
   cursor: pointer;
   &:hover {
-    background: dodgerblue  ;
-    border-color: dodgerblue;
+    background: #05abea;
+    border-color: #05abea;
   }
 }
 
@@ -96,13 +99,13 @@ body {
   padding: 0 20px;
   margin: 0;
   width: auto;
-  border: 2px solid #4b6cb7;
+  border: 2px solid #05abea;
   background: #ffffff;
   transition: 0.3s;
   font-size: inherit;
   &:focus,&:hover {
     color: black;
-    border-color: dodgerblue;
+    border-color: #05abea;
   }
 }
 
