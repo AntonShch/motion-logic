@@ -1,0 +1,10 @@
+/*
+ * Cities css File
+*/
+
+.cities {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,108 @@
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+
+* {
+  text-decoration: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input,button,select,div {
+  outline: none;
+  -webkit-appearance: none;
+}
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  position: relative;
+  line-height: 1.45;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  padding: 0 12px;
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+    background: #4b6cb7;
+  border: 2px solid #4b6cb7;
+  transition: 0.3s;
+  line-height: 1.45;
+  font-style: normal;
+  text-align: center;
+  width: auto;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background: dodgerblue  ;
+    border-color: dodgerblue;
+  }
+}
+
+
+.custom-input {
+  padding: 0 20px;
+  margin: 0;
+  width: auto;
+  border: 2px solid #4b6cb7;
+  background: #ffffff;
+  transition: 0.3s;
+  font-size: inherit;
+  &:focus,&:hover {
+    color: black;
+    border-color: dodgerblue;
+  }
+}
+
