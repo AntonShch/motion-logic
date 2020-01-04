@@ -28,6 +28,8 @@
     border: 2px solid #4b6cb7;
     width: 100%;
     background: white;
+    overflow-y: auto;
+    max-height: 500px;
     top: 48px;
     display: block;
     ul {
